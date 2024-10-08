@@ -1,0 +1,43 @@
+﻿@model Student
+@{
+    ViewData["Title"] = "Sertifika Görünteleme";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/certicatetemplate/css/certificateimg.css" rel="stylesheet" />
+
+<div class="container">
+    <h2>Sertifika Görüntüleme</h2>
+
+    <img src="~/CerticateTemplate/Images/Sertifika.jpg" alt="Sertifika" class="certificate" />
+
+    <div class="certificate-text adsoyad">
+    <h1 class="adsoyad"><i>@ViewBag.AdSoyad</i></h1>
+</div>
+    <div class="certificate-text metin">
+        <p>
+            İpek Yolu Uluslararası Çocuk ve Gençlik Çalışmaları Girişimci Kuluçka Birimi tarafından
+            @ViewBag.DateTime - @ViewBag.DateTime2 tarihleri arasında düzenlenen @ViewBag.EğitimAdi
+            eğitimini başarıyla tamamlayarak bu belgeyi almaya hak kazanmıştır.
+        </p>
+    </div>
+
+ 
+    <div class="download-buttons">
+        <button onclick="showDownloadOptions()">
+            <img src="~/CerticateTemplate/Images/indir.png" alt="İndir"> İndir
+        </button>
+    </div>
+
+
+    <div id="download-options" style="display: none; margin-top: 20px;">
+        <div class="download-buttons">
+            <button onclick="window.location.href='@Url.Action("DownloadImage", "CertificateImage", new { AdSoyad = ViewBag.AdSoyad, EğitimAdi = ViewBag.EğitimAdi, DateTime = ViewBag.DateTime, DateTime2 = ViewBag.DateTime2 })'">
+                <img src="~/CerticateTemplate/Images/görsel.png" alt="JPEG"> Görsel Olarak İndir (JPEG)
+            </button>
+            <button onclick="window.location.href='@Url.Action("DownloadPDF", "CertificateImage", new { AdSoyad = ViewBag.AdSoyad, EğitimAdi = ViewBag.EğitimAdi, DateTime = ViewBag.DateTime, DateTime2 = ViewBag.DateTime2 })'">
+                <img src="~/CerticateTemplate/Images/pdf.png" alt="PDF"> PDF Olarak İndir
+            </button>
+        </div>
+    </div>
+</div>
+

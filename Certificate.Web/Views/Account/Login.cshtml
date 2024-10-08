@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .container2 {
+        position: relative;
+        top: 100px;
+        left: 35%;
+        display: block;
+        margin-bottom: 80px;
+        width: 560px;
+        height: 510px;
+        border-radius: 5px;
+        overflow: hidden;
+        z-index: 1;
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+</style>
+<br />
+<div class="container2">
+    <h2>Giriş Paneli</h2>
+<form asp-action="Login" method="post">
+    <div>
+            <input type="text" name="userName" class="email" placeholder="Kullanıcı Adı" required />
+            <br />
+    </div>
+    <div>
+            <input type="password" name="password" class="email" placeholder="Şifre" required />
+            <br />
+    </div>
+    <div>
+            <button type="submit" class="register">
+                <span style="text-align:center;">Giriş Yap</span>
+            </button>
+    </div>
+</form>
+
+</div>

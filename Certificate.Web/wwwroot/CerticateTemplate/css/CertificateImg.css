@@ -1,0 +1,171 @@
+﻿/*CERTIFICATEIMAGE CSS*/
+
+.container {
+    position: relative;
+    top: 20px;
+    left: 35%;
+    display: block;
+    margin-bottom: 80px;
+    width: 40%;
+    height: auto;
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.certificate {
+    width: 100%;
+    height: auto;
+    border: 2px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.certificate-text {
+    position: absolute;
+    font-family: "Poppins"; /* Poppins fontu */
+    font-size: 24px; /* Font size set to 14px */
+}
+
+.adsoyad {
+    top: 264px; /* AdSoyad konumu */
+    left: 105px;
+    color: #b28c53;
+    font-size: 24px;
+    font-family: "Libre Baskerville"; /* Poppins fontu */
+}
+
+.full-width-image {
+    position: fixed;
+    top: 0px;
+    width: 100%;  Görüntünün genişliği kapsayıcısına tam sığar 
+    height: auto;  Yükseklik orantılı olarak ayarlanır 
+    display: block;  Blok seviyesinde görüntü, kendi satırında başlar 
+    object-fit: contain;  Resmi kırpma veya taşma olmadan kutuya sığdır 
+}
+.download-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+    .download-buttons button {
+        width: 200px; /* Buton genişliği */
+        height: 40px; /* Buton yüksekliği */
+        text-transform: none;
+        margin: 0 10px;
+        padding: 5px 22px; /* Padding, buton boyutuna uyacak şekilde ayarlandı */
+        font-size: 16px;
+        font-family: 'Poppins', sans-serif;
+        border-radius: 25px; /* Buton kenarlarını yuvarlat */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+    }
+
+        .download-buttons button:nth-of-type(1) {
+            background: transparent; /* İlk buton için şeffaf arka plan */
+            border: 2px solid #003087;
+            color: #003087;
+        }
+
+        .download-buttons button:nth-of-type(2) {
+            background: transparent; /* İkinci buton için arka plan */
+            border: 2px solid #003087;
+            color: #003087;
+        }
+
+        .download-buttons button img {
+            margin-right: 8px;
+            width: 20px;
+            height: 20px;
+            transition: all 0.3s ease;
+        }
+
+        /* Hover efekti ile butonlardaki ikonların değişmesi */
+        .download-buttons button:hover img {
+            content: url(''); /* JS ile dinamik olarak değişecek */
+            transition: all 0.3s ease;
+        }
+
+        /* İlk butonun hover durumunda arka plan rengi */
+        .download-buttons button:nth-of-type(1):hover {
+            background-color: #003087;
+            color: white;
+        }
+
+        .download-buttons button:nth-of-type(2):hover {
+            background-color: #003087;
+            color: white;
+        }
+
+/*
+.download-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+    .download-buttons button {
+        width: 150px;  Buton genişliği 
+        height: 40px;  Buton yüksekliği 
+        text-transform: none;
+        margin: 0 10px;
+        padding: 5px 22px;  Padding, buton boyutuna uyacak şekilde ayarlandı 
+        font-size: 16px;
+        font-family: 'Poppins', sans-serif;
+        border-radius: 25px;  Buton kenarlarını yuvarlat 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        cursor: pointer;
+    }
+
+        .download-buttons button:nth-of-type(1) {
+            background: transparent;  İlk buton için şeffaf arka plan 
+            border: 2px solid #003087;
+            color: #003087;
+        }
+
+        .download-buttons button:nth-of-type(2) {
+            background: #003087;  İkinci buton için arka plan 
+            color: white;
+            border: none;  İkinci butonun kenarları olmadan 
+        }
+
+        .download-buttons button img {
+            margin-right: 8px;
+            width: 20px;
+            height: 20px;
+        }
+
+        .download-buttons button:hover {
+            transform: scale(1.1);  Hover üzerinde zoom efekti 
+        }
+
+        .download-buttons button:nth-of-type(1):hover {
+            background-color: #003087;
+            color: white;
+        }
+
+        .download-buttons button:nth-of-type(2):hover {
+            background-color: #003087;
+            color: white;
+        }
+*/
+.certificate-text.metin {
+    position: absolute;
+    top: 330px; /* Ad Soyad ile simgeler arasındaki boşluğa göre ayarla */
+    left: 50px; /* Görselin sol kenarına göre hizalayın */
+    width: 500px; /* Metnin genişliği */
+    font-family: "Poppins"; /* Poppins fontu */
+    font-size: 14px; /* Yazı boyutu */
+    color: black; /* Yazı rengi */
+    text-align: justify; /* Metni hizala */
+}

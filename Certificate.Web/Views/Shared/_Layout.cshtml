@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="~/certicatetemplate/css/style.css?v=1.0" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+    @RenderBody()
+
+    <img src="@Url.Content("~/certicatetemplate/images/ipekyolu.jpeg")" class="full-width-image" />
+
+    <script src="~/CerticateTemplate/javascript.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+
+    <script src="~/certicatetemplate/button.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5/6b3pZ6p7rC/iD6YQ3BbwpXcI6p0Si5th6Fm5oc" crossorigin="anonymous"></script>
+
+</body>
+</html>

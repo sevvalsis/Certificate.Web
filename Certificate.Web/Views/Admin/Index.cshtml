@@ -1,0 +1,70 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .container2 {
+        position: relative;
+        top: 30px;
+        left: 35%;
+        display: block;
+        margin-bottom: 80px;
+        width: 560px;
+        height: 650px;
+        border-radius: 5px;
+        overflow: hidden;
+        z-index: 1;
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+</style>
+   
+<div class="container2">
+    @{
+        ViewBag.Title = "Admin Panel";
+    }
+
+@*     <h2>Manuel Veri Girişi</h2>
+
+    <form asp-action="SaveManualData" method="post">
+       
+        <input type="text" name="tc" class="email" placeholder="T.C." required />
+        <br />
+        
+        <input type="text" name="tc" class="email" placeholder="Ad Soyad" required />
+        <br />
+        
+        <input type="text" name="tc" class="email" placeholder="Eğitim Adı" required />
+        <br />
+        
+        <input type="date" name="tc" class="email" placeholder="Başlangıç Tarihi" required />
+        <br />
+        
+        <input type="date" name="tc" class="email" placeholder="Bitiş Tarihi" required />
+        <br />
+        
+        <button type="submit" class="register">
+            <span>Kaydet</span>
+        </button>
+    </form> *@
+
+    <h2>Excel'den Verileri Yükle</h2>
+
+    <form asp-action="UploadExcel" method="post" enctype="multipart/form-data">
+        <div>
+            <input type="file" class="email" name="Dosya" accept=".xls,.xlsx" />
+            <br />
+            <button type="submit" class="register">
+                <span>Yükle</span>
+            </button>
+        </div>
+    </form>
+
+
+
+    @if (ViewBag.Message != null)
+    {
+        <p style="color:green">@ViewBag.Message</p>
+    }
+
+</div>
+
